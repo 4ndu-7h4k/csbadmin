@@ -19,9 +19,7 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
  {} I am {} Bot!
- [owner](tg://user?id=254318997)
-{}"""
-
+ [owner](tg://user?id=254318997)"""
 HELP_STRINGS = """
 {}
 
