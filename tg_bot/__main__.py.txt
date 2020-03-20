@@ -18,39 +18,26 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-hoi {}, my name is {}! if you have any questions about how to use me please give me /help... 
-
-im a group manager bot maintained by  [this person](tg://user?id={}).
-
-My future updates will be put into This Channel - @MarieChechi & My Support Group @InFoTelGroup.
-
-This is my [Deploy Code](https://heroku.com/deploy?template=https://github.com/TGExplore/Marie-2.0-English),
-you can create clone same like me..
-
-For more commands click /help...
-
-**Keep in mind that any changes you DO do to the source have to be on github, as per the license.**
-
-"""
-
+ {} I am {} Bot!
+ [owner](tg://user?id=254318997)"""
 HELP_STRINGS = """
+{}
 
-Hello! my name *{}*.
-
-*Main* available commands:
- - /start: Start the bot...
- - /help: help....
- - /donate: To find out more about donating!
+*Main* command:
+ - /start: Bot Start
+ - /help: ഈ മെസ്സേജ് നിങ്ങളുടെ PM വരാൻ....
+ - /help <module name>: ഒരു MODULE നെക്കുറിച്ചുള്ള വിവരം നിങ്ങളുടെ PMൽ വരാൻ....
+ - /donate: സംഭാവന നൽകുന്നതിനെക്കുറിച്ചുള്ള വിവരങ്ങൾ അറിയാൻ!
  - /settings:
-   - in PM: To find out what SETTINGS you have set....
-   - in a group:
+   - in PM:നിങ്ങൾ സെറ്റ് ചെയ്തിട്ടുള്ള SETTINGS എന്തൊക്കെ ആണെന്ന് അറിയാൻ....
+   - in a group:ഗ്രൂപ്പിൽ കൊടുത്താലും  PMൽ settings വരുന്നതാണ്....
 
 {}
 And the following:
-""".format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll of the following commands  / or ! can  be used...\n")
+""".format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nഈ പറഞ്ഞിരിക്കുന്ന commandകൾ എല്ലാം  / അല്ലെങ്കിൽ ! വെച്ച് ഉപയോഗിക്കാവുന്നതാണ്...\n")
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-It took lots of work for [my creator](t.me/SonOfLars) to get me to where I am now, and every donation helps \
+It took lots of work for [my creator](t.me/sonoflars) to get me to where I am now, and every donation helps \
 motivate him to make me even better. All the donation money will go to a better VPS to host me, and/or beer \
 (see his bio!). He's just a poor student, so every little helps!
 There are two ways of paying him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
@@ -145,7 +132,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 parse_mode=ParseMode.MARKDOWN)
     else:
-        update.effective_message.reply_text("waked up😏😏😏")
+        update.effective_message.reply_text("ഹായ് മച്ചാൻ,  എന്താണ്??")
 
 
 # for test purposes
